@@ -1,0 +1,14 @@
+-- 🔐 Gestion des rôles et des permissions dans SQL Server
+
+-- Création d’un rôle personnalisé
+USE MaBaseDeDonnees;
+CREATE ROLE RoleLectureSeule;
+
+-- Attribution de droits à ce rôle
+GRANT SELECT ON SCHEMA::dbo TO RoleLectureSeule;
+
+-- Ajouter un utilisateur à ce rôle
+EXEC sp_addrolemember 'RoleLectureSeule', 'NomUtilisateur';
+
+-- Révocation d'un droit
+-- REVOKE SELECT ON SCHEMA::dbo FROM RoleLectureSeule;
