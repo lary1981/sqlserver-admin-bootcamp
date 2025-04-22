@@ -9,6 +9,7 @@ Suivre le nombre d’employés par département
 Utiliser les jointures
 
 -- 📄 02-suivi-employes/init_employes.sql
+
 CREATE DATABASE RH_DB;
 USE RH_DB;
 
@@ -33,6 +34,7 @@ INSERT INTO Employes (nom, poste, departement_id) VALUES
 
 -- 📄 02-suivi-employes/statistiques.sql
 -- Nombre d’employés par département
+
 SELECT D.nom, COUNT(E.id) AS nb_employes
 FROM Departements D
 LEFT JOIN Employes E ON D.id = E.departement_id
