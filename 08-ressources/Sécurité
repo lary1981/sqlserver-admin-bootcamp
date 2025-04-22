@@ -1,0 +1,5 @@
+-- Créer un rôle
+CREATE ROLE NomRole;
+
+-- Ajouter un utilisateur à un rôle
+EXEC sp_addrolemember 'NomRole', 'NomUtilisateur';
