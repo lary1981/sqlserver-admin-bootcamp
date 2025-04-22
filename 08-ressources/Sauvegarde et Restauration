@@ -1,0 +1,5 @@
+-- Sauvegarder une base de données
+BACKUP DATABASE MaBaseDeDonnees TO DISK = 'C:\\Sauvegardes\\MaBase.bak';
+
+-- Restaurer une base de données
+RESTORE DATABASE MaBaseDeDonnees FROM DISK = 'C:\\Sauvegardes\\MaBase.bak';
